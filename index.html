@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Livesdk-for-android by math4youbyusgroupillinois</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Livesdk-for-android</h1>
+        <h2></h2>
+
+        <section id="downloads">
+          <a href="https://github.com/math4youbyusgroupillinois/LiveSDK-for-Android/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/math4youbyusgroupillinois/LiveSDK-for-Android/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/math4youbyusgroupillinois/LiveSDK-for-Android" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="live-sdk-for-android-" class="anchor" href="#live-sdk-for-android-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Live SDK for Android </h1>
+
+<p>version 5.6</p>
+
+<h2>
+<a id="1-introduction" class="anchor" href="#1-introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Introduction</h2>
+
+<p>The Live SDK for Android library is intended to help developers to easily 
+integrate OneDrive and Outlook.com contacts into their Android apps.</p>
+
+<p>For questions on how to use the sdk visit <a href="http://stackoverflow.com/questions/tagged/onedrive">http://stackoverflow.com/questions/tagged/onedrive</a></p>
+
+<h2>
+<a id="2-reference-the-api" class="anchor" href="#2-reference-the-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Reference the API</h2>
+
+<p>After you download the Android API source code, you must compile it. You need
+to do this only once. After you compile the Android API source code on your
+computer, you can reference it from multiple Eclipse Android projects on that
+same computer.</p>
+
+<p>To compile the Android API source code  </p>
+
+<ul>
+<li>Start Eclipse, if it is not already running.</li>
+<li>Click File &gt; Import.</li>
+<li>Expand General, click Existing Projects into Workspace, and then click Next.</li>
+<li>With the Select root directory option selected, click Browse.</li>
+<li>Go to and select the src folder within the downloaded Live SDK for Android, and then click OK.</li>
+<li>In the Projects box, select the LiveSdk check box.</li>
+<li>With the Copy projects into workspace check box selected, click Finish.
+Eclipse adds the LiveSdk project to the Package Explorer pane and then
+compiles the Android API source code in the background.</li>
+<li>You can now reference the compiled Android API source code from your Eclipse
+Android projects.</li>
+</ul>
+
+<p>To reference the compiled Android API source code in an Eclipse Android
+project</p>
+
+<ul>
+<li>In Eclipse, display the Package Explorer pane, if it is not already visible.</li>
+<li>Right-click your project's name, and then click Properties.</li>
+<li>In the list of project properties, click Android.</li>
+<li>In the Library area, click Add.</li>
+<li>Click LiveSdk and then click OK.</li>
+<li>Click OK. Eclipse sets a reference to the compiled Android API source code
+project, and you can now call the Live Connect Android API from your own
+Android project.</li>
+</ul>
+
+<p>Note: Before you run your project, you must add the Internet permission to your
+      project's manifest, as shown in the following steps. If you don't add the
+      Internet permission, your app may have problems accessing Live Connect
+      web services later.</p>
+
+<ul>
+<li>With your project open, in the Package Explorer pane, open the AndroidManifest.xml file.</li>
+<li>In the editor, click the Permissions tab.</li>
+<li>Click Add.</li>
+<li>Click Uses Permission, and then click OK.</li>
+<li>the Name list, click android.permission.INTERNET.</li>
+<li>Save the AndroidManifest.xml file.</li>
+</ul>
+
+<p>Notes:
+The Java Compiler must be version 1.6 or higher.</p>
+
+<h2>
+<a id="3-documentation" class="anchor" href="#3-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Documentation</h2>
+
+<p>Visit: <a href="http://dev.onedrive.com">http://dev.onedrive.com</a> and click the "Documentation" link. </p>
+
+<h2>
+<a id="4-sample-project" class="anchor" href="#4-sample-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Sample project</h2>
+
+<p>There is a sample project located in the sample directory. Using eclipse this project can be added
+using the File &gt; Import &gt; General &gt; Existing Projects into Workspace wizard. Before the project can be
+properly used, the static variable com.microsoft.live.sample.Config.CLIENT_ID (see Config.java) must
+be changed to your own client ID. To obtain a Client ID, visit the <a href="http://go.microsoft.com/fwlink/p/?LinkId=193157">Live SDK App management page</a></p>
+
+<h2>
+<a id="5-known-issues" class="anchor" href="#5-known-issues" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Known issues:</h2>
+
+<p>1) Login dialog is destroyed on screen rotation if the Activity is not set to
+   ignore orientation changes in AndroidManifest.xml.</p>
+
+<h2>
+<a id="license-agreement" class="anchor" href="#license-agreement" aria-hidden="true"><span class="octicon octicon-link"></span></a>License Agreement</h2>
+
+<p>Copyright (c) 2014 Microsoft Corporation</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
